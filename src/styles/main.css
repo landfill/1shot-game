@@ -1,0 +1,264 @@
+:root {
+  --ink: #171512;
+  --muted: #5d625f;
+  --paper: #f2f4ef;
+  --panel: #fffdf5;
+  --edge: rgba(23, 21, 18, 0.16);
+  --shadow: rgba(23, 21, 18, 0.14);
+  --green: #235f4a;
+  --red: #b7352e;
+  --gold: #d2a53b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--paper);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(35, 95, 74, 0.12) 0 1px, transparent 1px 96px),
+    linear-gradient(0deg, rgba(183, 53, 46, 0.08) 0 1px, transparent 1px 96px),
+    var(--paper);
+  font-family: "Bahnschrift", "Aptos Display", "Trebuchet MS", sans-serif;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.arcade-shell {
+  width: min(1180px, calc(100% - 36px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 42px 0 48px;
+}
+
+.masthead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 32px;
+  align-items: end;
+  padding: 26px 0 34px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.eyebrow {
+  width: fit-content;
+  margin: 0 0 14px;
+  padding: 7px 10px 6px;
+  border: 1px solid var(--ink);
+  background: var(--gold);
+  color: #18120c;
+  font-size: 0.88rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+h1 {
+  max-width: 860px;
+  margin: 0;
+  font-size: 6.4rem;
+  line-height: 0.9;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.mast-copy {
+  margin: 0;
+  padding: 18px 0 4px;
+  border-top: 1px solid var(--edge);
+  color: var(--muted);
+  font-size: 1.12rem;
+  line-height: 1.45;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  padding-top: 28px;
+}
+
+.game-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 620px;
+  border: 2px solid var(--ink);
+  background: var(--panel);
+  box-shadow: 10px 10px 0 var(--ink);
+  overflow: hidden;
+  animation: card-rise 520ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+  animation-delay: var(--delay);
+}
+
+.game-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 12px;
+  background: var(--accent);
+  z-index: 2;
+}
+
+.thumb-link {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  border-bottom: 2px solid var(--ink);
+  background: var(--secondary);
+  overflow: hidden;
+}
+
+.game-thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 220ms ease;
+}
+
+.game-card:hover .game-thumb,
+.game-card:focus-within .game-thumb {
+  transform: scale(1.025);
+}
+
+.game-copy {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 16px;
+  min-height: 0;
+  padding: 24px 24px 24px 34px;
+}
+
+.game-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.game-meta b {
+  color: var(--ink);
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.7rem;
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.game-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.45;
+}
+
+.play-link {
+  display: inline-flex;
+  justify-self: start;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 2px solid var(--ink);
+  background: var(--accent);
+  color: #fffdf7;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  box-shadow: 5px 5px 0 var(--ink);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.play-link:hover,
+.play-link:focus-visible {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--ink);
+  outline: none;
+}
+
+@keyframes card-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 840px) {
+  .arcade-shell {
+    width: min(100% - 24px, 620px);
+    padding: 26px 0 34px;
+  }
+
+  .masthead,
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .masthead {
+    gap: 22px;
+  }
+
+  h1 {
+    font-size: 2.35rem;
+    line-height: 1.02;
+  }
+
+  .mast-copy {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+    line-height: 1;
+  }
+
+  .game-card {
+    min-height: 0;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  .game-copy {
+    padding: 20px 18px 20px 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}

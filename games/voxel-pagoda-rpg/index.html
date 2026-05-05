@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voxel Sakura Pagoda RPG</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%237f171b'/%3E%3Crect x='14' y='24' width='36' height='8' fill='%23f6c55a'/%3E%3Crect x='18' y='32' width='28' height='20' fill='%23ff8bb7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/styles/game-shell.css">
+  <link rel="stylesheet" href="/src/games/voxel-pagoda-rpg/game.css">
+</head>
+<body>
+  <a class="gameBackLink" href="/">Arcade</a>
+<canvas id="scene" aria-label="Interactive voxel pagoda action RPG scene"></canvas>
+  <div class="ui">
+    <section class="hud" aria-label="Game status">
+      <div class="hudTop">
+        <div>
+          <h1 class="title">Sakura Pagoda</h1>
+          <div class="subtitle">Voxel garden combat diorama</div>
+        </div>
+        <div class="seal">SAK</div>
+      </div>
+      <div class="metrics">
+        <div class="metric"><b id="hpReadout">100</b><span>HP</span></div>
+        <div class="metric"><b id="enemyReadout">0</b><span>Enemies</span></div>
+        <div class="metric"><b id="koReadout">0</b><span>KO</span></div>
+      </div>
+      <div class="control">
+        <label for="enemyCount">Enemy count <strong id="enemyTargetReadout">40</strong></label>
+        <input id="enemyCount" type="range" min="0" max="100" step="10" value="40" />
+      </div>
+    </section>
+  </div>
+  <div class="ribbon" aria-hidden="true">
+    <div class="chip"><b>WASD</b><span>Move</span></div>
+    <div class="chip"><b>Space</b><span>Jump</span></div>
+    <div class="chip"><b>J / Click</b><span>Slash</span></div>
+    <div class="chip"><b>K / Right</b><span>Spin</span></div>
+  </div>
+  <div class="toast" id="toast">Torii wind rises</div>
+  <script type="module" src="/src/games/voxel-pagoda-rpg/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sakura Brick 11v11 Football</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23141820'/%3E%3Ccircle cx='32' cy='32' r='18' fill='%23f3c944'/%3E%3Cpath d='M16 32h32M32 14v36' stroke='%232f7df6' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/styles/game-shell.css">
+  <link rel="stylesheet" href="/src/games/sakura-football/game.css">
+</head>
+<body>
+  <a class="gameBackLink" href="/">Arcade</a>
+<main id="game" aria-label="Sakura Brick 11v11 Football"></main>
+
+  <section class="hud" aria-hidden="true">
+    <div class="scoreboard">
+      <div class="teamBox home">
+        <span class="crest"></span>
+        <span class="label">
+          <span class="name">Sakura Blue</span>
+          <span class="role">Home control</span>
+        </span>
+      </div>
+      <div class="scoreCore">
+        <span class="score" id="homeScore">0</span>
+        <span class="clock">
+          <strong id="clock">03:00</strong>
+          <span>Quick match</span>
+        </span>
+        <span class="score" id="awayScore">0</span>
+      </div>
+      <div class="teamBox away">
+        <span class="label">
+          <span class="name">Koi Red</span>
+          <span class="role">Away AI</span>
+        </span>
+        <span class="crest"></span>
+      </div>
+    </div>
+
+    <div class="sidePanel">
+      <div class="panel statusPanel">
+        <div>
+          <div class="playerName" id="selectedName">Selected: Midfielder 8</div>
+          <div class="possession" id="possessionText">Kickoff ready</div>
+        </div>
+        <div class="staminaWrap">
+          <div class="stamina" id="stamina"></div>
+        </div>
+      </div>
+
+      <div class="panel powerPanel">
+        <div class="powerTop">
+          <span>Shot charge</span>
+          <span id="powerText">0%</span>
+        </div>
+        <div class="powerBar">
+          <div class="powerFill" id="powerFill"></div>
+        </div>
+      </div>
+
+      <div class="panel controlsPanel">
+        <ul class="controlsGrid">
+          <li><span class="key">WASD</span> Move</li>
+          <li><span class="key">Arrows</span> Move</li>
+          <li><span class="key">Shift</span> Sprint</li>
+          <li><span class="key">J</span> Pass</li>
+          <li><span class="key">K</span> Through</li>
+          <li><span class="key">Space</span> Shot</li>
+          <li><span class="key">Q</span> Switch</li>
+          <li><span class="key">R</span> Kickoff</li>
+          <li><span class="key">Pad</span> LS/RT/A/Y/B/LB</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cornerBadge">Sakura Brick theme: torii gate, pagoda, lotus pond, garden, striped 110m x 68m pitch.</div>
+
+    <div class="toast" id="toast">
+      <strong id="toastTitle">Goal</strong>
+      <span id="toastBody">Sakura Blue scores</span>
+    </div>
+
+    <div class="matchOver" id="matchOver">
+      <div class="matchCard">
+        <h1>Full Time</h1>
+        <p id="finalText">Sakura Blue 0 - 0 Koi Red</p>
+        <button class="restartButton" id="restartButton" type="button">Restart match</button>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="/src/games/sakura-football/game.js"></script>
+</body>
+</html>

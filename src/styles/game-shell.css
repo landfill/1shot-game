@@ -1,0 +1,41 @@
+.gameBackLink {
+  position: fixed;
+  top: max(14px, env(safe-area-inset-top));
+  right: max(14px, env(safe-area-inset-right));
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 8px;
+  background: rgba(10, 12, 14, 0.62);
+  color: #fffaf0;
+  font-family: "Bahnschrift", "Aptos Display", "Trebuchet MS", sans-serif;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(12px);
+  pointer-events: auto;
+}
+
+.gameBackLink:hover,
+.gameBackLink:focus-visible {
+  background: rgba(10, 12, 14, 0.84);
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  .gameBackLink {
+    min-width: 72px;
+    min-height: 34px;
+    padding: 0 10px;
+    font-size: 0.74rem;
+  }
+}
