@@ -208,6 +208,75 @@
       opacity: 1;
     }
 
+    .gameOver {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      background: rgba(19, 9, 14, 0.44);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease;
+    }
+
+    .gameOver.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .gameOverCard {
+      width: min(430px, calc(100vw - 44px));
+      border: 1px solid rgba(255, 219, 148, 0.38);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 247, 226, 0.94), rgba(255, 219, 213, 0.9)),
+        repeating-linear-gradient(45deg, rgba(142, 77, 53, 0.06) 0 2px, transparent 2px 7px);
+      box-shadow: 0 26px 80px rgba(19, 9, 14, 0.45);
+      padding: 24px;
+      text-align: center;
+      transform: translateY(8px);
+      transition: transform 180ms ease;
+    }
+
+    .gameOver.show .gameOverCard {
+      transform: translateY(0);
+    }
+
+    .gameOverCard p {
+      margin: 0 0 8px;
+      color: #8d2732;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .gameOverCard h2 {
+      margin: 0;
+      color: #421623;
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .gameOverCard button {
+      margin-top: 20px;
+      min-height: 42px;
+      padding: 0 22px;
+      border: 1px solid rgba(85, 24, 34, 0.45);
+      border-radius: 8px;
+      background: #d22f20;
+      color: #fff7df;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 10px 22px rgba(139, 32, 32, 0.24);
+    }
+
     .loadError {
       position: fixed;
       inset: 0;

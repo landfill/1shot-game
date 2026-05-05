@@ -9,6 +9,8 @@
     const enemySlider = document.getElementById("enemyCount");
     const enemyTargetReadout = document.getElementById("enemyTargetReadout");
     const toast = document.getElementById("toast");
+    const gameOverPanel = document.getElementById("gameOverPanel");
+    const restartButton = document.getElementById("restartButton");
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x9fd4eb);
@@ -505,7 +507,8 @@
         attackTimer: 0,
         spinTimer: 0,
         step: 0,
-        lastGrounded: true
+        lastGrounded: true,
+        dead: false
       };
     }
 
@@ -533,6 +536,10 @@
         if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(code)) {
           e.preventDefault();
         }
+        if (player.dead) {
+          if (code === "KeyR") restartGame();
+          return;
+        }
         keys.add(code);
         pressed.add(code);
       });
@@ -545,6 +552,7 @@
       });
       window.addEventListener("contextmenu", (e) => e.preventDefault());
       canvas.addEventListener("mousedown", (e) => {
+        if (player.dead) return;
         pointer.down = true;
         if (e.button === 0) {
           normalAttack();
@@ -562,6 +570,11 @@
         trimEnemiesToTarget();
         spawnQueue = Math.max(spawnQueue, Math.max(0, targetEnemyCount - enemies.length));
       });
+      restartButton.addEventListener("click", restartGame);
+    }
+
+    function restartGame() {
+      window.location.reload();
     }
 
     function trimEnemiesToTarget() {
@@ -655,6 +668,7 @@
     }
 
     function normalAttack() {
+      if (player.dead) return;
       if (player.attackCd > 0 || player.spinTimer > 0 || player.roll > 0) return;
       player.attackTimer = 0.22;
       player.attackCd = 0.25;
@@ -667,6 +681,7 @@
     }
 
     function spinAttack() {
+      if (player.dead) return;
       if (player.spinCd > 0 || player.roll > 0) return;
       player.spinTimer = 0.42;
       player.spinCd = 0.72;
@@ -679,6 +694,7 @@
     }
 
     function startRoll() {
+      if (player.dead) return;
       if (player.rollCd > 0 || player.roll > 0 || player.spinTimer > 0) return;
       const dir = inputVector();
       if (dir.lengthSq() === 0) {
@@ -839,6 +855,12 @@
     }
 
     function updatePlayer(dt) {
+      if (player.dead) {
+        player.vel.multiplyScalar(Math.pow(0.04, dt));
+        player.group.position.copy(player.pos);
+        return;
+      }
+
       const move = inputVector();
       const running = keys.has("ShiftLeft") || keys.has("ShiftRight");
       const speed = running ? 13.5 : 8.2;
@@ -1031,9 +1053,13 @@
         if (dist < 1.8 && enemy.attackCd <= 0 && player.invuln <= 0) {
           enemy.attackCd = range(1.0, 1.8);
           player.hp = clamp(player.hp - 3, 0, 100);
-          player.invuln = 0.34;
-          const away = tmpVec2.copy(playerPos).sub(enemy.pos).normalize();
-          player.vel.addScaledVector(away, 5.5);
+          if (player.hp <= 0) {
+            defeatPlayer();
+          } else {
+            player.invuln = 0.34;
+            const away = tmpVec2.copy(playerPos).sub(enemy.pos).normalize();
+            player.vel.addScaledVector(away, 5.5);
+          }
           cameraShake = Math.max(cameraShake, 0.18);
           hitStop = 0.045;
           spawnDust(player.pos, 9, 0xffd39a, 0.8);
@@ -1225,6 +1251,38 @@
       }
     }
 
+    function defeatPlayer() {
+      if (player.dead) return;
+      player.dead = true;
+      player.hp = 0;
+      player.invuln = Number.POSITIVE_INFINITY;
+      player.roll = 0;
+      player.attackTimer = 0;
+      player.spinTimer = 0;
+      player.vel.set(0, 0, 0);
+      player.vertical = 0;
+      keys.clear();
+      pressed.clear();
+      pointer.down = false;
+      applyDefeatPose();
+      gameOverPanel.classList.add("show");
+      gameOverPanel.setAttribute("aria-hidden", "false");
+      showToast("Defeated");
+    }
+
+    function applyDefeatPose() {
+      const p = player.parts;
+      p.body.rotation.x = 1.15;
+      p.chest.rotation.x = 0.9;
+      p.head.rotation.x = 0.75;
+      p.armL.rotation.x = -0.6;
+      p.armR.rotation.x = -0.8;
+      p.legL.rotation.x = 0.45;
+      p.legR.rotation.x = -0.25;
+      p.sword.rotation.set(-1.1, 0, -0.35);
+      player.group.rotation.y = visualFacing();
+    }
+
     function resize() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
@@ -1251,10 +1309,12 @@
       const simDt = hitStop > 0 ? rawDt * 0.08 : rawDt;
       hitStop = Math.max(0, hitStop - rawDt);
 
-      maintainSpawns(simDt);
-      updatePlayer(simDt);
-      updateEnemies(simDt);
-      updateDestructibles(simDt);
+      if (!player.dead) {
+        maintainSpawns(simDt);
+        updatePlayer(simDt);
+        updateEnemies(simDt);
+        updateDestructibles(simDt);
+      }
       updateDebris(rawDt);
       updateAttackEffects(rawDt);
       updateKoi(rawDt);
@@ -1276,6 +1336,12 @@
       normalAttack,
       spinAttack,
       startRoll,
+      defeatPlayer,
+      damagePlayer(amount) {
+        if (player.dead) return;
+        player.hp = clamp(player.hp - Math.max(0, amount), 0, 100);
+        if (player.hp <= 0) defeatPlayer();
+      },
       setEnemyCount(count) {
         targetEnemyCount = clamp(Math.round(count / 10) * 10, 0, 100);
         enemySlider.value = String(targetEnemyCount);
@@ -1289,7 +1355,8 @@
           destructibles: objects.filter((o) => o.alive).length,
           debris: debris.length,
           koCount,
-          hp: player.hp
+          hp: player.hp,
+          dead: player.dead
         };
       }
     };
