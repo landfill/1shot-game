@@ -1,11 +1,14 @@
 ﻿# Toy Arcade
 
-Vite 기반 멀티 페이지 게임 런처입니다. 메인 페이지에서 두 개의 Three.js 게임을 썸네일로 선택해 각각의 게임 페이지로 진입합니다.
+Vite 기반 멀티 페이지 게임 런처입니다. 메인 페이지에서 Three.js 게임을 썸네일로 선택해 각각의 게임 페이지로 진입합니다.
 
 ## Games
 
 - Sakura Brick 11v11 Football: `/games/sakura-football/`
 - Voxel Sakura Pagoda RPG: `/games/voxel-pagoda-rpg/`
+- Eastern Clash: Shadow Arena: `/games/eastern-clash-shadow-arena/`
+
+Eastern Clash uses image-generated realistic side-facing character cutouts under `src/assets/characters/eastern-clash/` as the visible fighter layer, while the Three.js game loop keeps lightweight procedural hitboxes and strike effects for browser performance.
 
 ## Requirements
 
@@ -36,6 +39,8 @@ npm run preview
 ├── games/
 │   ├── sakura-football/
 │   │   └── index.html
+│   ├── eastern-clash-shadow-arena/
+│   │   └── index.html
 │   └── voxel-pagoda-rpg/
 │       └── index.html
 ├── src/
@@ -43,6 +48,9 @@ npm run preview
 │   ├── data/games.js
 │   ├── games/
 │   │   ├── sakura-football/
+│   │   │   ├── game.css
+│   │   │   └── game.js
+│   │   ├── eastern-clash-shadow-arena/
 │   │   │   ├── game.css
 │   │   │   └── game.js
 │   │   └── voxel-pagoda-rpg/

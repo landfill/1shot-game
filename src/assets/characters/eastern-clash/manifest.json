@@ -1,0 +1,50 @@
+{
+  "assetSet": "Eastern Clash realistic character cutouts",
+  "generationMode": "built-in imagegen with chroma-key background removal",
+  "backgroundRemoval": {
+    "tool": "C:/Users/surro/.codex/skills/.system/imagegen/scripts/remove_chroma_key.py",
+    "options": "--auto-key border --soft-matte --transparent-threshold 12 --opaque-threshold 220 --despill"
+  },
+  "characters": [
+    {
+      "id": "ryuhan",
+      "source": "source/ryuhan-source.png",
+      "cutout": "cutouts/ryuhan.png",
+      "sideSource": "source/ryuhan-side-source.png",
+      "sideCutout": "cutouts/ryuhan-side.png",
+      "fallenSource": "source/ryuhan-fallen-source.png",
+      "fallenCutout": "cutouts/ryuhan-fallen.png",
+      "promptSummary": "Realistic East Asian male martial artist in navy sleeveless martial arts outfit, red cloth belt, black wraps, ready fighting stance."
+    },
+    {
+      "id": "ayane",
+      "source": "source/ayane-source.png",
+      "cutout": "cutouts/ayane.png",
+      "sideSource": "source/ayane-side-source.png",
+      "sideCutout": "cutouts/ayane-side.png",
+      "fallenSource": "source/ayane-fallen-source.png",
+      "fallenCutout": "cutouts/ayane-fallen.png",
+      "promptSummary": "Realistic East Asian female shadow assassin in black and deep purple leather/fabric armor, twin daggers, low defensive stance."
+    },
+    {
+      "id": "genzo",
+      "source": "source/genzo-source.png",
+      "cutout": "cutouts/genzo.png",
+      "sideSource": "source/genzo-side-source.png",
+      "sideCutout": "cutouts/genzo-side.png",
+      "fallenSource": "source/genzo-fallen-source.png",
+      "fallenCutout": "cutouts/genzo-fallen.png",
+      "promptSummary": "Realistic older East Asian samurai swordsman in dark kimono combat robes and leather armor, katana two-handed stance."
+    },
+    {
+      "id": "meilin",
+      "source": "source/meilin-source.png",
+      "cutout": "cutouts/meilin.png",
+      "sideSource": "source/meilin-side-source.png",
+      "sideCutout": "cutouts/meilin-side.png",
+      "fallenSource": "source/meilin-fallen-source.png",
+      "fallenCutout": "cutouts/meilin-fallen.png",
+      "promptSummary": "Realistic East Asian female staff fighter in red and gold martial combat outfit, polished wooden staff, balanced stance."
+    }
+  ]
+}

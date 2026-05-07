@@ -1,0 +1,16 @@
+{
+  "stages": [
+    {
+      "id": "moon-temple",
+      "name": "Moonlit Temple",
+      "background": "backgrounds/moon-temple-realistic.png",
+      "sourcePrompt": "Realistic cinematic East Asian moonlit temple courtyard background for a 2.5D fighting game, clear empty central combat lane, no characters or UI."
+    },
+    {
+      "id": "bamboo-arena",
+      "name": "Bamboo Forest",
+      "background": "backgrounds/bamboo-arena-realistic.png",
+      "sourcePrompt": "Realistic cinematic East Asian bamboo forest duel arena background for a 2.5D fighting game, clear empty central combat lane, no characters or UI."
+    }
+  ]
+}

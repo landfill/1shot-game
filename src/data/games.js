@@ -1,7 +1,19 @@
 import footballThumb from "../assets/thumbnails/sakura-football.svg";
 import pagodaThumb from "../assets/thumbnails/pagoda-rpg.svg";
+import easternClashThumb from "../assets/thumbnails/eastern-clash.svg";
 
 export const games = [
+  {
+    id: "eastern-clash-shadow-arena",
+    title: "Eastern Clash: Shadow Arena",
+    deck: "1v1 fighter",
+    detail: "A moonlit Eastern martial arts duel with four fighters, two arenas, round rules, guard, throws, specials, ultimates, and NPC AI.",
+    href: "/games/eastern-clash-shadow-arena/",
+    thumbnail: easternClashThumb,
+    accent: "#b73a2f",
+    secondary: "#d9ad58",
+    stat: "1v1"
+  },
   {
     id: "sakura-football",
     title: "Sakura Brick 11v11 Football",

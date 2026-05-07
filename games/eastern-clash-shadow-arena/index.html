@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eastern Clash: Shadow Arena</title>
+  <link rel="icon" href="/src/assets/thumbnails/eastern-clash.svg">
+  <link rel="stylesheet" href="/src/styles/game-shell.css">
+  <link rel="stylesheet" href="/src/games/eastern-clash-shadow-arena/game.css">
+</head>
+<body>
+  <a class="gameBackLink" href="/">Arcade</a>
+  <canvas id="scene" aria-label="Eastern Clash 3D fighting arena"></canvas>
+
+  <main class="screenLayer" aria-live="polite">
+    <section class="titleScreen panelScreen is-active" id="titleScreen" aria-label="Title screen">
+      <div class="titleMark">Eastern Clash</div>
+      <h1>Shadow Arena</h1>
+      <p class="tagline">A moonlit 1v1 martial duel against a computer fighter.</p>
+      <div class="titleActions">
+        <button class="primaryButton" id="startButton" type="button">Start Game</button>
+        <button class="ghostButton" id="howButton" type="button">How to Play</button>
+        <button class="ghostButton" id="settingsButton" type="button">Settings</button>
+      </div>
+    </section>
+
+    <section class="selectScreen panelScreen" id="selectScreen" aria-label="Character select">
+      <div class="selectHeader">
+        <div>
+          <p class="eyebrow">Single Match</p>
+          <h2>Choose Your Fighter</h2>
+        </div>
+        <button class="ghostButton compact" id="backToTitleButton" type="button">Main Menu</button>
+      </div>
+
+      <div class="selectLayout">
+        <div class="fighterGrid" id="fighterGrid" aria-label="Fighter roster"></div>
+        <aside class="fighterPanel">
+          <p class="eyebrow" id="selectedConcept">Martial Artist</p>
+          <h3 id="selectedName">Ryuhan</h3>
+          <p id="selectedBio">Balanced hand-to-hand fighter with fast chains and a short ki burst.</p>
+          <div class="statGrid" id="statGrid"></div>
+          <div class="selectControls">
+            <label>
+              <span>Stage</span>
+              <select id="stageSelect">
+                <option value="moon-temple">Moonlit Temple</option>
+                <option value="bamboo-arena">Bamboo Forest</option>
+              </select>
+            </label>
+            <label>
+              <span>NPC</span>
+              <select id="npcSelect">
+                <option value="random">Random Rival</option>
+                <option value="ayane">Ayane</option>
+                <option value="genzo">Genzo</option>
+                <option value="meilin">Meilin</option>
+                <option value="ryuhan">Ryuhan</option>
+              </select>
+            </label>
+            <label>
+              <span>Difficulty</span>
+              <select id="difficultySelect">
+                <option value="normal">Normal</option>
+                <option value="easy">Easy</option>
+                <option value="hard">Hard</option>
+              </select>
+            </label>
+          </div>
+          <button class="primaryButton wide" id="confirmButton" type="button">Enter Arena</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="battleHud" id="battleHud" aria-label="Battle HUD">
+      <div class="hudTop">
+        <div class="healthBox playerSide">
+          <div class="nameLine">
+            <b id="playerName">Ryuhan</b>
+            <span id="playerStyle">Kung Fu</span>
+          </div>
+          <div class="healthTrack"><div class="healthFill playerFill" id="playerHealth"></div></div>
+          <div class="meterTrack"><div class="meterFill" id="playerMeter"></div></div>
+          <div class="roundDots" id="playerRounds"></div>
+        </div>
+
+        <div class="roundCore">
+          <strong id="roundTimer">60</strong>
+          <span id="roundLabel">Round 1</span>
+        </div>
+
+        <div class="healthBox npcSide">
+          <div class="nameLine">
+            <b id="npcName">Ayane</b>
+            <span id="npcStyle">Assassin</span>
+          </div>
+          <div class="healthTrack"><div class="healthFill npcFill" id="npcHealth"></div></div>
+          <div class="meterTrack"><div class="meterFill npcMeter" id="npcMeter"></div></div>
+          <div class="roundDots" id="npcRounds"></div>
+        </div>
+      </div>
+
+      <div class="comboReadout" id="comboReadout"></div>
+      <div class="aiReadout" id="aiReadout">NPC: Idle</div>
+
+      <div class="commandStrip" aria-label="Keyboard commands">
+        <span><b>A/D</b> Move</span>
+        <span><b>W</b> Jump</span>
+        <span><b>S</b> Crouch</span>
+        <span><b>J/K/L</b> Attack</span>
+        <span><b>U</b> Grab</span>
+        <span><b>I</b> Guard</span>
+        <span><b>O</b> Ultimate</span>
+        <span><b>Esc</b> Pause</span>
+      </div>
+    </section>
+
+    <div class="centerMessage" id="centerMessage">Round 1</div>
+
+    <section class="resultScreen panelScreen" id="resultScreen" aria-label="Match result">
+      <p class="eyebrow" id="resultKicker">Result</p>
+      <h2 id="resultTitle">Victory</h2>
+      <p id="resultDetail">Ryuhan wins the match.</p>
+      <div class="resultRounds" id="resultRounds"></div>
+      <div class="titleActions">
+        <button class="primaryButton" id="retryButton" type="button">Retry</button>
+        <button class="ghostButton" id="selectAgainButton" type="button">Character Select</button>
+        <button class="ghostButton" id="mainMenuButton" type="button">Main Menu</button>
+      </div>
+    </section>
+
+    <section class="modalPanel" id="howModal" aria-hidden="true">
+      <div class="modalCard">
+        <button class="closeButton" data-close-modal type="button" aria-label="Close">x</button>
+        <p class="eyebrow">Controls</p>
+        <h2>Readable, timing-based combat</h2>
+        <div class="moveList">
+          <span>J: light</span>
+          <span>K: heavy</span>
+          <span>L: special</span>
+          <span>U: grab</span>
+          <span>I: guard</span>
+          <span>O: ultimate</span>
+          <span>S + J: low sweep</span>
+          <span>D, D + K: rush strike</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="modalPanel" id="settingsModal" aria-hidden="true">
+      <div class="modalCard">
+        <button class="closeButton" data-close-modal type="button" aria-label="Close">x</button>
+        <p class="eyebrow">Settings</p>
+        <h2>Arena Options</h2>
+        <div class="settingsGrid">
+          <label><span>BGM</span><input id="bgmToggle" type="checkbox" checked></label>
+          <label><span>SFX</span><input id="sfxToggle" type="checkbox" checked></label>
+          <label><span>Screen Shake</span><input id="shakeToggle" type="checkbox" checked></label>
+          <label>
+            <span>Graphics</span>
+            <select id="qualitySelect">
+              <option value="high">High</option>
+              <option value="medium" selected>Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/games/eastern-clash-shadow-arena/game.js"></script>
+</body>
+</html>
