@@ -7,6 +7,7 @@ Vite 기반 멀티 페이지 게임 런처입니다. 메인 페이지에서 Thre
 - Sakura Brick 11v11 Football: `/games/sakura-football/`
 - Voxel Sakura Pagoda RPG: `/games/voxel-pagoda-rpg/`
 - Eastern Clash: Shadow Arena: `/games/eastern-clash-shadow-arena/`
+- Natural UI: Tearable Layers: `/games/naturalUI/`
 
 Eastern Clash uses image-generated realistic side-facing character cutouts under `src/assets/characters/eastern-clash/` as the visible fighter layer, while the Three.js game loop keeps lightweight procedural hitboxes and strike effects for browser performance.
 
@@ -41,8 +42,11 @@ npm run preview
 │   │   └── index.html
 │   ├── eastern-clash-shadow-arena/
 │   │   └── index.html
-│   └── voxel-pagoda-rpg/
-│       └── index.html
+│   ├── voxel-pagoda-rpg/
+│   │   └── index.html
+│   └── naturalUI/
+│       ├── index.html
+│       └── assets/
 ├── src/
 │   ├── assets/thumbnails/
 │   ├── data/games.js
@@ -65,4 +69,5 @@ npm run preview
 
 - `index.html`은 게임 선택용 메인 런처입니다.
 - 각 게임은 별도 HTML, CSS, JavaScript 파일로 분리되어 유지보수 범위를 좁힙니다.
+- `games/naturalUI/`는 이미 빌드된 정적 앱이므로 Vite build 후 `dist/games/naturalUI/`로 그대로 복사됩니다.
 - `voxel-pagoda-rpg.html`은 기존 직접 접근 경로를 새 RPG 게임 경로로 넘기는 호환용 리다이렉트 페이지입니다.

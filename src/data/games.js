@@ -35,5 +35,16 @@ export const games = [
     accent: "#d22f20",
     secondary: "#2eb07f",
     stat: "100 foes"
+  },
+  {
+    id: "natural-ui",
+    title: "Natural UI: Tearable Layers",
+    deck: "Interaction study",
+    detail: "A touch-friendly cloth tearing interaction that peels layered character images with a WASM cloth simulation.",
+    href: "/games/naturalUI/",
+    thumbnail: "/games/naturalUI/assets/layers/layer-001.jpg",
+    accent: "#6b5cff",
+    secondary: "#f1d7a8",
+    stat: "WASM"
   }
 ];

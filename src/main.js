@@ -29,9 +29,9 @@ app.innerHTML = `
   <section class="masthead">
     <div>
       <p class="eyebrow">Toy Arcade</p>
-      <h1>Two handmade voxel games in one cabinet.</h1>
+      <h1>Four browser toys in one cabinet.</h1>
     </div>
-    <p class="mast-copy">A stadium under sakura lights and a shrine garden brawl, framed as two quick cabinets for the same shelf.</p>
+    <p class="mast-copy">Small interactive experiments, from voxel arenas to cloth-driven image layers, framed as quick cabinets for the same shelf.</p>
   </section>
   <section class="game-grid" aria-label="Game library">
     ${games.map(renderGameCard).join("")}
