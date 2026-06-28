@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Coin And Gate",
+      "url": "/assets/levels/level-1.json"
+    },
+    {
+      "id": "level-2",
+      "title": "High Road",
+      "url": "/assets/levels/level-2.json"
+    },
+    {
+      "id": "level-3",
+      "title": "Orc Gate",
+      "url": "/assets/levels/level-3.json"
+    }
+  ]
+}

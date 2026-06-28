@@ -1,0 +1,137 @@
+{
+  "$schema": "https://example.local/phaser-starter-character-assets.schema.json",
+  "version": 1,
+  "id": "enemy-v3-purple-orc",
+  "characterId": "round3-enemy-v3-purple-orc",
+  "description": "Purple orc enemy assets generated with Spriterrific SDK/CLI for the v3 starter playground.",
+  "direction": "w",
+  "frameWidth": 256,
+  "frameHeight": 256,
+  "margin": 0,
+  "spacing": 0,
+  "anchor": {
+    "x": 0.5,
+    "y": 0.99609375
+  },
+  "anchorPixels": {
+    "x": 128,
+    "y": 255
+  },
+  "source": {
+    "baseAnimationRun": "spriterrific-sdk/animation-runs/20260527T135021Z-round3-enemy-v3-purple-orc-actions-w",
+    "runAnimationRun": "spriterrific-sdk/animation-runs/20260527T142703Z-round3-enemy-v3-purple-orc-run-sword-locked-w",
+    "runPostSelection": "spriterrific-sdk/animation-runs/20260527T142703Z-round3-enemy-v3-purple-orc-run-sword-locked-w/run-w/frame-picker/20260527T142954Z/post-selection/20260527-152954",
+    "attackPostSelection": "spriterrific-sdk/animation-runs/20260527T135021Z-round3-enemy-v3-purple-orc-actions-w/attack-w/frame-picker/20260527T152107Z/post-selection/20260527-162107"
+  },
+  "images": [
+    {
+      "id": "enemy-v3-purple-orc-anchor-w",
+      "kind": "image",
+      "path": "anchor-w.png",
+      "url": "/assets/enemies/purple-orc/anchor-w.png",
+      "width": 1024,
+      "height": 1024,
+      "usage": "Purple orc west-facing transparent anchor reference"
+    }
+  ],
+  "animations": [
+    {
+      "id": "enemy-v3-purple-orc-idle",
+      "action": "idle",
+      "path": "idle.png",
+      "url": "/assets/enemies/purple-orc/idle.png",
+      "preview": "idle-preview.gif",
+      "previewUrl": "/assets/enemies/purple-orc/idle-preview.gif",
+      "frames": 12,
+      "columns": 5,
+      "rows": 3,
+      "frameRate": 6,
+      "repeat": -1,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "enemy-v3-purple-orc-walk",
+      "action": "walk",
+      "path": "walk.png",
+      "url": "/assets/enemies/purple-orc/walk.png",
+      "preview": "walk-preview.gif",
+      "previewUrl": "/assets/enemies/purple-orc/walk-preview.gif",
+      "frames": 8,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 7,
+      "repeat": -1,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "enemy-v3-purple-orc-run",
+      "action": "run",
+      "path": "run.png",
+      "url": "/assets/enemies/purple-orc/run.png",
+      "preview": "run-preview.gif",
+      "previewUrl": "/assets/enemies/purple-orc/run-preview.gif",
+      "frames": 8,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 12,
+      "repeat": -1,
+      "source": "runPostSelection"
+    },
+    {
+      "id": "enemy-v3-purple-orc-jump",
+      "action": "jump",
+      "path": "jump.png",
+      "url": "/assets/enemies/purple-orc/jump.png",
+      "preview": "jump-preview.gif",
+      "previewUrl": "/assets/enemies/purple-orc/jump-preview.gif",
+      "frames": 6,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 8,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "enemy-v3-purple-orc-attack",
+      "action": "attack",
+      "path": "attack.png",
+      "url": "/assets/enemies/purple-orc/attack.png",
+      "preview": "attack-preview.gif",
+      "previewUrl": "/assets/enemies/purple-orc/attack-preview.gif",
+      "frames": 7,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 12,
+      "repeat": 0,
+      "source": "attackPostSelection"
+    },
+    {
+      "id": "enemy-v3-purple-orc-hurt",
+      "action": "hurt",
+      "path": "hurt.png",
+      "url": "/assets/enemies/purple-orc/hurt.png",
+      "preview": "hurt-preview.gif",
+      "previewUrl": "/assets/enemies/purple-orc/hurt-preview.gif",
+      "frames": 6,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 8,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "enemy-v3-purple-orc-death",
+      "action": "death",
+      "path": "death.png",
+      "url": "/assets/enemies/purple-orc/death.png",
+      "preview": "death-preview.gif",
+      "previewUrl": "/assets/enemies/purple-orc/death-preview.gif",
+      "frames": 10,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 8,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    }
+  ]
+}

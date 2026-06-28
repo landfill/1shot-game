@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "savedAt": "2026-05-28T14:54:22.461Z",
+  "level": {
+    "version": 1,
+    "id": "level-1",
+    "title": "Coin And Gate",
+    "width": 1280,
+    "height": 720,
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "playerStart": {
+      "x": 142,
+      "y": 368
+    },
+    "objects": [
+      {
+        "id": "ground-left",
+        "frameName": "platform-long-grass-stone",
+        "x": 286,
+        "y": 564,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "ground-right",
+        "frameName": "platform-long-grass-stone",
+        "x": 894,
+        "y": 564,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "coin-1",
+        "frameName": "collectible-coin",
+        "x": 592,
+        "y": 368,
+        "scale": 0.7272727272727273,
+        "depth": 24
+      },
+      {
+        "id": "exit-portal",
+        "frameName": "portal-exit-complete",
+        "x": 1120,
+        "y": 503,
+        "scale": 0.7272727272727273,
+        "depth": 12
+      },
+      {
+        "id": "grass-tuft",
+        "frameName": "prop-grass-tuft",
+        "x": 360,
+        "y": 564,
+        "scale": 0.7272727272727273,
+        "depth": 16
+      },
+      {
+        "id": "flower",
+        "frameName": "prop-flower",
+        "x": 760,
+        "y": 564,
+        "scale": 0.7272727272727273,
+        "depth": 16
+      },
+      {
+        "id": "platform-short-grass-stone-mppm5tus",
+        "frameName": "platform-short-grass-stone",
+        "x": 1135,
+        "y": 565,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      }
+    ]
+  }
+}

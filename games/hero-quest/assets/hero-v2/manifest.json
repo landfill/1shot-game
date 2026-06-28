@@ -1,0 +1,164 @@
+{
+  "$schema": "https://example.local/phaser-starter-hero-assets.schema.json",
+  "version": 1,
+  "id": "hero-v2",
+  "characterId": "round2-v2-quest-hero",
+  "description": "Revised high-fidelity west-facing platformer hero assets generated with Spriterrific SDK/CLI.",
+  "direction": "w",
+  "frameWidth": 256,
+  "frameHeight": 256,
+  "margin": 0,
+  "spacing": 0,
+  "anchor": {
+    "x": 0.5,
+    "y": 0.99609375
+  },
+  "anchorPixels": {
+    "x": 128,
+    "y": 255
+  },
+  "source": {
+    "baseAnimationRun": "spriterrific-sdk/animation-runs/20260527T102022Z-round2-v2-user-prompt-nosnap-w",
+    "runPostSelection": "spriterrific-sdk/animation-runs/20260527T102022Z-round2-v2-user-prompt-nosnap-w/run-w/frame-picker/20260527T103121Z/post-selection/20260527-113121",
+    "idleRun": "spriterrific-sdk/animation-runs/20260527T102433Z-round2-v2-standing-still-idle-w",
+    "enterPortalAnchorRun": "spriterrific-sdk/runs/20260528T055818Z-round2-hero-v2-back-nosnap-n",
+    "enterPortalRun": "spriterrific-sdk/animation-runs/20260528T055818Z-round2-hero-v2-walk-forward-into-portal-n"
+  },
+  "images": [
+    {
+      "id": "hero-v2-anchor-w",
+      "kind": "image",
+      "path": "anchor-w.png",
+      "url": "/assets/hero-v2/anchor-w.png",
+      "width": 1024,
+      "height": 1024,
+      "usage": "Revised v2 west-facing transparent anchor reference"
+    },
+    {
+      "id": "hero-v2-anchor-n",
+      "kind": "image",
+      "path": "anchor-n.png",
+      "url": "/assets/hero-v2/anchor-n.png",
+      "width": 1024,
+      "height": 1024,
+      "usage": "Revised v2 north-facing back-view transparent anchor reference for portal entry"
+    }
+  ],
+  "animations": [
+    {
+      "id": "hero-v2-idle",
+      "action": "idle",
+      "path": "idle.png",
+      "url": "/assets/hero-v2/idle.png",
+      "preview": "idle-preview.gif",
+      "previewUrl": "/assets/hero-v2/idle-preview.gif",
+      "frames": 12,
+      "columns": 5,
+      "rows": 3,
+      "frameRate": 6,
+      "repeat": -1,
+      "source": "idleRun"
+    },
+    {
+      "id": "hero-v2-walk",
+      "action": "walk",
+      "path": "walk.png",
+      "url": "/assets/hero-v2/walk.png",
+      "preview": "walk-preview.gif",
+      "previewUrl": "/assets/hero-v2/walk-preview.gif",
+      "frames": 8,
+      "columns": 5,
+      "rows": 3,
+      "frameRate": 7,
+      "repeat": -1,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "hero-v2-enter-portal",
+      "action": "enter-portal",
+      "engineAction": "walk_forward",
+      "direction": "n",
+      "path": "enter-portal.png",
+      "url": "/assets/hero-v2/enter-portal.png",
+      "preview": "enter-portal-preview.gif",
+      "previewUrl": "/assets/hero-v2/enter-portal-preview.gif",
+      "frames": 12,
+      "columns": 5,
+      "rows": 3,
+      "frameRate": 7,
+      "repeat": -1,
+      "source": "enterPortalRun"
+    },
+    {
+      "id": "hero-v2-run",
+      "action": "run",
+      "path": "run.png",
+      "url": "/assets/hero-v2/run.png",
+      "preview": "run-preview.gif",
+      "previewUrl": "/assets/hero-v2/run-preview.gif",
+      "frames": 8,
+      "columns": 5,
+      "rows": 3,
+      "frameRate": 10,
+      "repeat": -1,
+      "source": "runPostSelection"
+    },
+    {
+      "id": "hero-v2-jump",
+      "action": "jump",
+      "path": "jump.png",
+      "url": "/assets/hero-v2/jump.png",
+      "preview": "jump-preview.gif",
+      "previewUrl": "/assets/hero-v2/jump-preview.gif",
+      "frames": 6,
+      "columns": 5,
+      "rows": 3,
+      "frameRate": 8,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "hero-v2-light-punch",
+      "action": "light-punch",
+      "engineAction": "light_attack",
+      "path": "light-punch.png",
+      "url": "/assets/hero-v2/light-punch.png",
+      "preview": "light-punch-preview.gif",
+      "previewUrl": "/assets/hero-v2/light-punch-preview.gif",
+      "frames": 8,
+      "columns": 5,
+      "rows": 3,
+      "frameRate": 12,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "hero-v2-hurt",
+      "action": "hurt",
+      "path": "hurt.png",
+      "url": "/assets/hero-v2/hurt.png",
+      "preview": "hurt-preview.gif",
+      "previewUrl": "/assets/hero-v2/hurt-preview.gif",
+      "frames": 6,
+      "columns": 5,
+      "rows": 3,
+      "frameRate": 8,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "hero-v2-death",
+      "action": "death",
+      "path": "death.png",
+      "url": "/assets/hero-v2/death.png",
+      "preview": "death-preview.gif",
+      "previewUrl": "/assets/hero-v2/death-preview.gif",
+      "frames": 10,
+      "columns": 5,
+      "rows": 3,
+      "frameRate": 8,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    }
+  ]
+}

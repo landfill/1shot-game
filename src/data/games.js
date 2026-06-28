@@ -46,5 +46,27 @@ export const games = [
     accent: "#6b5cff",
     secondary: "#f1d7a8",
     stat: "WASM"
+  },
+  {
+    id: "vibe-fighter",
+    title: "Vibe Fighter",
+    deck: "Phaser fighter",
+    detail: "A local 1v1 fighting prototype with character select, CPU matches, rooftop stages, debug tuning panels, and gamepad-friendly controls.",
+    href: "/games/vibe-fighter/",
+    thumbnail: "/games/vibe-fighter/assets/mode-cards/mode-1v1-card.png",
+    accent: "#f05a28",
+    secondary: "#20b486",
+    stat: "Phaser"
+  },
+  {
+    id: "hero-quest",
+    title: "Hero Quest",
+    deck: "Fantasy platformer",
+    detail: "A playable canvas platformer built from the Hero Quest asset pack with parallax forests, sprite animation, coins, hazards, enemies, and portal goals.",
+    href: "/games/hero-quest/",
+    thumbnail: "/games/hero-quest/assets/splash/hero-quest-splash.png",
+    accent: "#3f8e4d",
+    secondary: "#f7c653",
+    stat: "3 levels"
   }
 ];

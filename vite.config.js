@@ -1,24 +1,45 @@
-import { cpSync, existsSync } from "node:fs";
+import { cpSync, existsSync, rmSync } from "node:fs";
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
 
-function copyNaturalUiStatic() {
+const staticApps = [
+  {
+    name: "natural-ui",
+    source: "games/naturalUI",
+    target: "dist/games/naturalUI"
+  },
+  {
+    name: "vibe-fighter",
+    source: "games/vibe-fighter",
+    target: "dist/games/vibe-fighter"
+  },
+  {
+    name: "hero-quest",
+    source: "games/hero-quest",
+    target: "dist/games/hero-quest"
+  }
+];
+
+function copyStaticGameApps() {
   return {
-    name: "copy-natural-ui-static",
+    name: "copy-static-game-apps",
     apply: "build",
     writeBundle() {
-      const source = resolve(__dirname, "games/naturalUI");
-      const target = resolve(__dirname, "dist/games/naturalUI");
+      for (const app of staticApps) {
+        const source = resolve(__dirname, app.source);
+        const target = resolve(__dirname, app.target);
 
-      if (existsSync(source)) {
-        cpSync(source, target, { recursive: true });
+        if (existsSync(source)) {
+          rmSync(target, { recursive: true, force: true });
+          cpSync(source, target, { recursive: true });
+        }
       }
     }
   };
 }
 
 export default defineConfig({
-  plugins: [copyNaturalUiStatic()],
+  plugins: [copyStaticGameApps()],
   build: {
     rollupOptions: {
       input: {

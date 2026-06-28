@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero Quest</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23081211'/%3E%3Cpath d='M32 8l18 10v18c0 11-7 18-18 22-11-4-18-11-18-22V18L32 8z' fill='%23f7c653'/%3E%3Cpath d='M25 27h14v22H25z' fill='%233f8e4d'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="back-link" href="/">Arcade</a>
+  <main class="game-shell">
+    <canvas id="game" width="1280" height="720" aria-label="Hero Quest playable platformer"></canvas>
+
+    <section class="hud" aria-label="Game status">
+      <div class="hud__brand">
+        <strong>영웅의 여정</strong>
+        <span id="levelTitle">로딩 중</span>
+      </div>
+      <div class="hud__stats">
+        <span><b id="healthReadout">100</b> 체력</span>
+        <span><b id="coinReadout">0</b>/<b id="coinTotalReadout">0</b> 코인</span>
+      </div>
+      <div class="hud__actions">
+        <button type="button" class="level-button is-active" data-level="level-1">I</button>
+        <button type="button" class="level-button" data-level="level-2">II</button>
+        <button type="button" class="level-button" data-level="level-3">III</button>
+        <button type="button" id="restartButton">재시작</button>
+      </div>
+    </section>
+
+    <div class="controls" aria-hidden="true">
+      <span><b>A/D</b> 이동</span>
+      <span><b>W/Space</b> 점프</span>
+      <span><b>J</b> 공격</span>
+      <span><b>R</b> 재시작</span>
+    </div>
+
+    <section class="overlay is-visible" id="overlay" aria-live="polite">
+      <div>
+        <p id="overlayKicker">영웅의 여정</p>
+        <h1 id="overlayTitle">게이트 코인을 모두 회수하세요.</h1>
+        <button id="startButton" type="button">게임 시작</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./game.js"></script>
+</body>
+</html>

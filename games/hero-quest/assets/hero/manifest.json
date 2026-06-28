@@ -1,0 +1,139 @@
+{
+  "$schema": "https://example.local/phaser-starter-hero-assets.schema.json",
+  "version": 1,
+  "id": "hero",
+  "characterId": "v3-quest-hero-hifi-044",
+  "description": "High-fidelity west-facing platformer hero assets generated with Spriterrific SDK/CLI.",
+  "direction": "w",
+  "frameWidth": 256,
+  "frameHeight": 256,
+  "margin": 0,
+  "spacing": 0,
+  "anchor": {
+    "x": 0.5,
+    "y": 0.99609375
+  },
+  "anchorPixels": {
+    "x": 128,
+    "y": 255
+  },
+  "source": {
+    "anchorRun": "spriterrific-sdk/runs/20260525T195220Z-cursor-sdk-v3-quest-hero-hifi-044",
+    "baseAnimationRun": "spriterrific-sdk/animation-runs/20260526T061527Z-cursor-sdk-v3-quest-hero-hifi-044-w",
+    "idleRun": "spriterrific-sdk/animation-runs/20260526T094511Z-cursor-sdk-v3-quest-hero-hifi-044-idle-still-video-w",
+    "walkPostSelection": "spriterrific-sdk/animation-runs/20260526T-walk-slow-v3-quest-hero-hifi-044/walk-w/frame-picker/20260526T092244Z/post-selection/20260526-102244",
+    "runPostSelection": "spriterrific-sdk/animation-runs/20260526T061527Z-cursor-sdk-v3-quest-hero-hifi-044-w/run-w/frame-picker/20260526T092819Z/post-selection/20260526-102819"
+  },
+  "images": [
+    {
+      "id": "hero-anchor-w",
+      "kind": "image",
+      "path": "anchor-w.png",
+      "url": "/assets/hero/anchor-w.png",
+      "width": 1024,
+      "height": 1024,
+      "usage": "Accepted west-facing chroma anchor reference"
+    }
+  ],
+  "animations": [
+    {
+      "id": "hero-idle",
+      "action": "idle",
+      "path": "idle.png",
+      "url": "/assets/hero/idle.png",
+      "preview": "idle-preview.gif",
+      "previewUrl": "/assets/hero/idle-preview.gif",
+      "frames": 10,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 6,
+      "repeat": -1,
+      "source": "idleRun"
+    },
+    {
+      "id": "hero-walk",
+      "action": "walk",
+      "path": "walk.png",
+      "url": "/assets/hero/walk.png",
+      "preview": "walk-preview.gif",
+      "previewUrl": "/assets/hero/walk-preview.gif",
+      "frames": 10,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 10,
+      "repeat": -1,
+      "source": "walkPostSelection"
+    },
+    {
+      "id": "hero-run",
+      "action": "run",
+      "path": "run.png",
+      "url": "/assets/hero/run.png",
+      "preview": "run-preview.gif",
+      "previewUrl": "/assets/hero/run-preview.gif",
+      "frames": 8,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 10,
+      "repeat": -1,
+      "source": "runPostSelection"
+    },
+    {
+      "id": "hero-jump",
+      "action": "jump",
+      "path": "jump.png",
+      "url": "/assets/hero/jump.png",
+      "preview": "jump-preview.gif",
+      "previewUrl": "/assets/hero/jump-preview.gif",
+      "frames": 6,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 8,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "hero-light-punch",
+      "action": "light-punch",
+      "engineAction": "light_attack",
+      "path": "light-punch.png",
+      "url": "/assets/hero/light-punch.png",
+      "preview": "light-punch-preview.gif",
+      "previewUrl": "/assets/hero/light-punch-preview.gif",
+      "frames": 8,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 12,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "hero-hurt",
+      "action": "hurt",
+      "path": "hurt.png",
+      "url": "/assets/hero/hurt.png",
+      "preview": "hurt-preview.gif",
+      "previewUrl": "/assets/hero/hurt-preview.gif",
+      "frames": 6,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 8,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    },
+    {
+      "id": "hero-death",
+      "action": "death",
+      "path": "death.png",
+      "url": "/assets/hero/death.png",
+      "preview": "death-preview.gif",
+      "previewUrl": "/assets/hero/death-preview.gif",
+      "frames": 10,
+      "columns": 5,
+      "rows": 2,
+      "frameRate": 8,
+      "repeat": 0,
+      "source": "baseAnimationRun"
+    }
+  ]
+}

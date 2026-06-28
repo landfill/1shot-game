@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "savedAt": "2026-05-28T14:40:39.390Z",
+  "level": {
+    "version": 1,
+    "id": "level-2",
+    "title": "High Road",
+    "width": 2600,
+    "height": 720,
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 2600,
+      "height": 720
+    },
+    "playerStart": {
+      "x": 142,
+      "y": 368
+    },
+    "objects": [
+      {
+        "id": "ground-1",
+        "frameName": "platform-long-grass-stone",
+        "x": 286,
+        "y": 564,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "ground-2",
+        "frameName": "platform-medium-grass-stone",
+        "x": 800,
+        "y": 560,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "ground-3",
+        "frameName": "platform-long-grass-stone",
+        "x": 1260,
+        "y": 564,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "ground-4",
+        "frameName": "platform-long-grass-stone",
+        "x": 1940,
+        "y": 564,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "ground-5",
+        "frameName": "platform-medium-grass-stone",
+        "x": 2370,
+        "y": 564,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "step-1",
+        "frameName": "platform-short-grass-stone",
+        "x": 576,
+        "y": 448,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "step-2",
+        "frameName": "platform-medium-grass-stone",
+        "x": 1050,
+        "y": 318,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "step-3",
+        "frameName": "platform-short-grass-stone",
+        "x": 1584,
+        "y": 464,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      },
+      {
+        "id": "coin-2",
+        "frameName": "collectible-coin",
+        "x": 1056,
+        "y": 192,
+        "scale": 0.7272727272727273,
+        "depth": 24
+      },
+      {
+        "id": "coin-3",
+        "frameName": "collectible-coin",
+        "x": 1584,
+        "y": 352,
+        "scale": 0.7272727272727273,
+        "depth": 24
+      },
+      {
+        "id": "coin-4",
+        "frameName": "collectible-coin",
+        "x": 2008,
+        "y": 448,
+        "scale": 0.7272727272727273,
+        "depth": 24
+      },
+      {
+        "id": "spike-strip",
+        "frameName": "hazard-spike-strip",
+        "x": 800,
+        "y": 496,
+        "scale": 0.7272727272727273,
+        "depth": 18
+      },
+      {
+        "id": "exit-portal",
+        "frameName": "portal-exit-complete",
+        "x": 2384,
+        "y": 503,
+        "scale": 0.7272727272727273,
+        "depth": 12
+      },
+      {
+        "id": "bush",
+        "frameName": "prop-bush-clump",
+        "x": 336,
+        "y": 506,
+        "scale": 0.7272727272727273,
+        "depth": 16
+      },
+      {
+        "id": "flower",
+        "frameName": "prop-flower",
+        "x": 1320,
+        "y": 564,
+        "scale": 0.7272727272727273,
+        "depth": 16
+      },
+      {
+        "id": "platform-floating-ledge-mpplg7xo",
+        "frameName": "platform-floating-ledge",
+        "x": 784,
+        "y": 352,
+        "scale": 0.7272727272727273,
+        "depth": 10
+      }
+    ]
+  }
+}

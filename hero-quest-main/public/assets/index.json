@@ -1,0 +1,1053 @@
+{
+  "$schema": "https://example.local/phaser-starter-assets.schema.json",
+  "version": 3,
+  "generatedAt": "template-v3",
+  "description": "Canonical catalog for starter public assets, generated runtime textures, editable config resources, and sample levels.",
+  "publicAssets": {
+    "images": [
+      {
+        "id": "hero-quest-splash",
+        "kind": "image",
+        "path": "splash/hero-quest-splash.png",
+        "url": "/assets/splash/hero-quest-splash.png",
+        "width": 1672,
+        "height": 941,
+        "usage": "Hero Quest splash screen background",
+        "phaser": {
+          "load": "image",
+          "key": "hero-quest-splash"
+        }
+      },
+      {
+        "id": "hero-v2-anchor-w",
+        "kind": "image",
+        "path": "hero-v2/anchor-w.png",
+        "url": "/assets/hero-v2/anchor-w.png",
+        "width": 1024,
+        "height": 1024,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "anchorPixels": {
+          "x": 128,
+          "y": 255
+        },
+        "usage": "Revised v2 west-facing high-fidelity hero anchor reference",
+        "phaser": {
+          "load": "image",
+          "key": "hero-v2-anchor-w"
+        }
+      },
+      {
+        "id": "hero-v2-anchor-n",
+        "kind": "image",
+        "path": "hero-v2/anchor-n.png",
+        "url": "/assets/hero-v2/anchor-n.png",
+        "width": 1024,
+        "height": 1024,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "anchorPixels": {
+          "x": 128,
+          "y": 255
+        },
+        "usage": "Revised v2 north-facing back-view hero anchor reference for portal entry",
+        "phaser": {
+          "load": "image",
+          "key": "hero-v2-anchor-n"
+        }
+      },
+      {
+        "id": "quest-far",
+        "kind": "image",
+        "path": "backgrounds/quest-far.png",
+        "url": "/assets/backgrounds/quest-far.png",
+        "width": 1280,
+        "height": 720,
+        "usage": "Light far-distance quest parallax layer",
+        "phaser": {
+          "load": "image",
+          "key": "quest-far"
+        }
+      },
+      {
+        "id": "quest-mid",
+        "kind": "image",
+        "path": "backgrounds/quest-mid.png",
+        "url": "/assets/backgrounds/quest-mid.png",
+        "width": 1280,
+        "height": 720,
+        "usage": "Muted medium-distance quest parallax layer",
+        "phaser": {
+          "load": "image",
+          "key": "quest-mid"
+        }
+      },
+      {
+        "id": "quest-foreground",
+        "kind": "image",
+        "path": "backgrounds/quest-foreground.png",
+        "url": "/assets/backgrounds/quest-foreground.png",
+        "width": 1280,
+        "height": 720,
+        "alpha": true,
+        "usage": "Transparent sparse foreground parallax overlay",
+        "phaser": {
+          "load": "image",
+          "key": "quest-foreground"
+        }
+      },
+      {
+        "id": "quest-tiles-atlas",
+        "kind": "image",
+        "path": "tiles/quest/atlas-transparent.png",
+        "url": "/assets/tiles/quest/atlas-transparent.png",
+        "width": 1536,
+        "height": 1024,
+        "alpha": true,
+        "usage": "Transparent quest platformer tiles, props, hazards, collectibles, and object references",
+        "phaser": {
+          "load": "image",
+          "key": "quest-tiles-atlas"
+        }
+      },
+      {
+        "id": "quest-ui-atlas",
+        "kind": "image",
+        "path": "ui/quest/ui-atlas-transparent.png",
+        "url": "/assets/ui/quest/ui-atlas-transparent.png",
+        "width": 1536,
+        "height": 1024,
+        "alpha": true,
+        "usage": "Transparent quest HUD portraits, health bars, coin counters, and status icons",
+        "phaser": {
+          "load": "image",
+          "key": "quest-ui-atlas"
+        }
+      },
+      {
+        "id": "enemy-v3-purple-orc-anchor-w",
+        "kind": "image",
+        "path": "enemies/purple-orc/anchor-w.png",
+        "url": "/assets/enemies/purple-orc/anchor-w.png",
+        "width": 1024,
+        "height": 1024,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "anchorPixels": {
+          "x": 128,
+          "y": 255
+        },
+        "usage": "Purple orc west-facing enemy anchor reference",
+        "phaser": {
+          "load": "image",
+          "key": "enemy-v3-purple-orc-anchor-w"
+        }
+      }
+    ],
+    "spritesheets": [
+      {
+        "id": "hero-v2-idle",
+        "kind": "spritesheet",
+        "path": "hero-v2/idle.png",
+        "url": "/assets/hero-v2/idle.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 12,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "hero-v2-idle",
+          "action": "idle",
+          "frameRate": 6,
+          "repeat": -1
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "hero-v2-idle"
+        }
+      },
+      {
+        "id": "hero-v2-walk",
+        "kind": "spritesheet",
+        "path": "hero-v2/walk.png",
+        "url": "/assets/hero-v2/walk.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 8,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "hero-v2-walk",
+          "action": "walk",
+          "frameRate": 7,
+          "repeat": -1
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "hero-v2-walk"
+        }
+      },
+      {
+        "id": "hero-v2-enter-portal",
+        "kind": "spritesheet",
+        "path": "hero-v2/enter-portal.png",
+        "url": "/assets/hero-v2/enter-portal.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 12,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "hero-v2-enter-portal",
+          "action": "enter-portal",
+          "engineAction": "walk_forward",
+          "direction": "n",
+          "frameRate": 7,
+          "repeat": -1
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "hero-v2-enter-portal"
+        },
+        "source": "spriterrific-sdk/animation-runs/20260528T055818Z-round2-hero-v2-walk-forward-into-portal-n"
+      },
+      {
+        "id": "hero-v2-run",
+        "kind": "spritesheet",
+        "path": "hero-v2/run.png",
+        "url": "/assets/hero-v2/run.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 8,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "hero-v2-run",
+          "action": "run",
+          "frameRate": 10,
+          "repeat": -1
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "hero-v2-run"
+        }
+      },
+      {
+        "id": "hero-v2-jump",
+        "kind": "spritesheet",
+        "path": "hero-v2/jump.png",
+        "url": "/assets/hero-v2/jump.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 6,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "hero-v2-jump",
+          "action": "jump",
+          "frameRate": 8,
+          "repeat": 0
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "hero-v2-jump"
+        }
+      },
+      {
+        "id": "hero-v2-light-punch",
+        "kind": "spritesheet",
+        "path": "hero-v2/light-punch.png",
+        "url": "/assets/hero-v2/light-punch.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 8,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "hero-v2-light-punch",
+          "action": "light-punch",
+          "engineAction": "light_attack",
+          "frameRate": 12,
+          "repeat": 0,
+          "attackActiveFrames": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "hero-v2-light-punch"
+        }
+      },
+      {
+        "id": "hero-v2-hurt",
+        "kind": "spritesheet",
+        "path": "hero-v2/hurt.png",
+        "url": "/assets/hero-v2/hurt.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 6,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "hero-v2-hurt",
+          "action": "hurt",
+          "frameRate": 8,
+          "repeat": 0
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "hero-v2-hurt"
+        }
+      },
+      {
+        "id": "hero-v2-death",
+        "kind": "spritesheet",
+        "path": "hero-v2/death.png",
+        "url": "/assets/hero-v2/death.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 10,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "hero-v2-death",
+          "action": "death",
+          "frameRate": 8,
+          "repeat": 0
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "hero-v2-death"
+        }
+      },
+      {
+        "id": "enemy-v3-purple-orc-idle",
+        "kind": "spritesheet",
+        "path": "enemies/purple-orc/idle.png",
+        "url": "/assets/enemies/purple-orc/idle.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 12,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "enemy-v3-purple-orc-idle",
+          "action": "idle",
+          "frameRate": 6,
+          "repeat": -1
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "enemy-v3-purple-orc-idle"
+        }
+      },
+      {
+        "id": "enemy-v3-purple-orc-walk",
+        "kind": "spritesheet",
+        "path": "enemies/purple-orc/walk.png",
+        "url": "/assets/enemies/purple-orc/walk.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 8,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "enemy-v3-purple-orc-walk",
+          "action": "walk",
+          "frameRate": 7,
+          "repeat": -1
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "enemy-v3-purple-orc-walk"
+        }
+      },
+      {
+        "id": "enemy-v3-purple-orc-run",
+        "kind": "spritesheet",
+        "path": "enemies/purple-orc/run.png",
+        "url": "/assets/enemies/purple-orc/run.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 8,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "enemy-v3-purple-orc-run",
+          "action": "run",
+          "frameRate": 12,
+          "repeat": -1
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "enemy-v3-purple-orc-run"
+        }
+      },
+      {
+        "id": "enemy-v3-purple-orc-jump",
+        "kind": "spritesheet",
+        "path": "enemies/purple-orc/jump.png",
+        "url": "/assets/enemies/purple-orc/jump.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 6,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "enemy-v3-purple-orc-jump",
+          "action": "jump",
+          "frameRate": 8,
+          "repeat": 0
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "enemy-v3-purple-orc-jump"
+        }
+      },
+      {
+        "id": "enemy-v3-purple-orc-attack",
+        "kind": "spritesheet",
+        "path": "enemies/purple-orc/attack.png",
+        "url": "/assets/enemies/purple-orc/attack.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 7,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "enemy-v3-purple-orc-attack",
+          "action": "attack",
+          "frameRate": 12,
+          "repeat": 0,
+          "attackActiveFrames": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "enemy-v3-purple-orc-attack"
+        },
+        "source": "spriterrific-sdk/animation-runs/20260527T135021Z-round3-enemy-v3-purple-orc-actions-w/attack-w/frame-picker/20260527T152107Z/post-selection/20260527-162107"
+      },
+      {
+        "id": "enemy-v3-purple-orc-hurt",
+        "kind": "spritesheet",
+        "path": "enemies/purple-orc/hurt.png",
+        "url": "/assets/enemies/purple-orc/hurt.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 6,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "enemy-v3-purple-orc-hurt",
+          "action": "hurt",
+          "frameRate": 8,
+          "repeat": 0
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "enemy-v3-purple-orc-hurt"
+        }
+      },
+      {
+        "id": "enemy-v3-purple-orc-death",
+        "kind": "spritesheet",
+        "path": "enemies/purple-orc/death.png",
+        "url": "/assets/enemies/purple-orc/death.png",
+        "frameWidth": 256,
+        "frameHeight": 256,
+        "frames": 10,
+        "margin": 0,
+        "spacing": 0,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.99609375
+        },
+        "animation": {
+          "key": "enemy-v3-purple-orc-death",
+          "action": "death",
+          "frameRate": 8,
+          "repeat": 0
+        },
+        "phaser": {
+          "load": "spritesheet",
+          "key": "enemy-v3-purple-orc-death"
+        }
+      }
+    ],
+    "audio": [
+      {
+        "id": "hero-quest-theme",
+        "kind": "audio",
+        "category": "music",
+        "path": "audio/music/hero-quest-theme.mp3",
+        "url": "/assets/audio/music/hero-quest-theme.mp3",
+        "durationSeconds": 45,
+        "volume": 0.44,
+        "loop": true,
+        "usage": "Looping Hero Quest fantasy adventure theme",
+        "phaser": {
+          "load": "audio",
+          "key": "hero-quest-theme"
+        }
+      },
+      {
+        "id": "hero-jump",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/hero-jump.mp3",
+        "url": "/assets/audio/sfx/hero-jump.mp3",
+        "durationSeconds": 0.75,
+        "volume": 0.48,
+        "loop": false,
+        "usage": "Hero jump takeoff cue",
+        "phaser": {
+          "load": "audio",
+          "key": "hero-jump"
+        }
+      },
+      {
+        "id": "hero-land",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/hero-land.mp3",
+        "url": "/assets/audio/sfx/hero-land.mp3",
+        "durationSeconds": 0.65,
+        "volume": 0.42,
+        "loop": false,
+        "usage": "Hero landing on grassy stone cue",
+        "phaser": {
+          "load": "audio",
+          "key": "hero-land"
+        }
+      },
+      {
+        "id": "hero-step",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/hero-step.mp3",
+        "url": "/assets/audio/sfx/hero-step.mp3",
+        "durationSeconds": 0.55,
+        "volume": 0.24,
+        "loop": false,
+        "usage": "Hero footstep on grassy stone cue",
+        "phaser": {
+          "load": "audio",
+          "key": "hero-step"
+        }
+      },
+      {
+        "id": "hero-punch",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/hero-punch.mp3",
+        "url": "/assets/audio/sfx/hero-punch.mp3",
+        "durationSeconds": 0.7,
+        "volume": 0.52,
+        "loop": false,
+        "usage": "Hero punch attack cue",
+        "phaser": {
+          "load": "audio",
+          "key": "hero-punch"
+        }
+      },
+      {
+        "id": "coin-pickup",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/coin-pickup.mp3",
+        "url": "/assets/audio/sfx/coin-pickup.mp3",
+        "durationSeconds": 0.75,
+        "volume": 0.55,
+        "loop": false,
+        "usage": "Gold coin pickup chime",
+        "phaser": {
+          "load": "audio",
+          "key": "coin-pickup"
+        }
+      },
+      {
+        "id": "player-hurt",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/player-hurt.mp3",
+        "url": "/assets/audio/sfx/player-hurt.mp3",
+        "durationSeconds": 0.75,
+        "volume": 0.5,
+        "loop": false,
+        "usage": "Hero damage cue",
+        "phaser": {
+          "load": "audio",
+          "key": "player-hurt"
+        }
+      },
+      {
+        "id": "player-defeat",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/player-defeat.mp3",
+        "url": "/assets/audio/sfx/player-defeat.mp3",
+        "durationSeconds": 1.25,
+        "volume": 0.58,
+        "loop": false,
+        "usage": "Hero defeat cue",
+        "phaser": {
+          "load": "audio",
+          "key": "player-defeat"
+        }
+      },
+      {
+        "id": "orc-sword",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/orc-sword.mp3",
+        "url": "/assets/audio/sfx/orc-sword.mp3",
+        "durationSeconds": 0.75,
+        "volume": 0.48,
+        "loop": false,
+        "usage": "Purple orc sword slash cue",
+        "phaser": {
+          "load": "audio",
+          "key": "orc-sword"
+        }
+      },
+      {
+        "id": "orc-hurt",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/orc-hurt.mp3",
+        "url": "/assets/audio/sfx/orc-hurt.mp3",
+        "durationSeconds": 0.75,
+        "volume": 0.5,
+        "loop": false,
+        "usage": "Purple orc damage cue",
+        "phaser": {
+          "load": "audio",
+          "key": "orc-hurt"
+        }
+      },
+      {
+        "id": "orc-defeat",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/orc-defeat.mp3",
+        "url": "/assets/audio/sfx/orc-defeat.mp3",
+        "durationSeconds": 1.15,
+        "volume": 0.58,
+        "loop": false,
+        "usage": "Purple orc defeat cue",
+        "phaser": {
+          "load": "audio",
+          "key": "orc-defeat"
+        }
+      },
+      {
+        "id": "spike-hit",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/spike-hit.mp3",
+        "url": "/assets/audio/sfx/spike-hit.mp3",
+        "durationSeconds": 0.75,
+        "volume": 0.56,
+        "loop": false,
+        "usage": "Red spike hazard hit cue",
+        "phaser": {
+          "load": "audio",
+          "key": "spike-hit"
+        }
+      },
+      {
+        "id": "portal-locked",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/portal-locked.mp3",
+        "url": "/assets/audio/sfx/portal-locked.mp3",
+        "durationSeconds": 0.85,
+        "volume": 0.52,
+        "loop": false,
+        "usage": "Locked portal denial cue",
+        "phaser": {
+          "load": "audio",
+          "key": "portal-locked"
+        }
+      },
+      {
+        "id": "level-complete",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/level-complete.mp3",
+        "url": "/assets/audio/sfx/level-complete.mp3",
+        "durationSeconds": 2.2,
+        "volume": 0.62,
+        "loop": false,
+        "usage": "Level completion portal fanfare",
+        "phaser": {
+          "load": "audio",
+          "key": "level-complete"
+        }
+      },
+      {
+        "id": "ui-confirm",
+        "kind": "audio",
+        "category": "sfx",
+        "path": "audio/sfx/ui-confirm.mp3",
+        "url": "/assets/audio/sfx/ui-confirm.mp3",
+        "durationSeconds": 0.5,
+        "volume": 0.38,
+        "loop": false,
+        "usage": "Fantasy menu confirmation cue",
+        "phaser": {
+          "load": "audio",
+          "key": "ui-confirm"
+        }
+      }
+    ],
+    "config": [
+      {
+        "id": "starter-game-config",
+        "kind": "json",
+        "path": "config/game-config.json",
+        "url": "/assets/config/game-config.json",
+        "usage": "Runtime tuning values edited from the debug shell"
+      },
+      {
+        "id": "starter-input-map",
+        "kind": "json",
+        "path": "config/input-map.json",
+        "url": "/assets/config/input-map.json",
+        "usage": "Action-oriented input map reference"
+      },
+      {
+        "id": "starter-actor-bounds",
+        "kind": "json",
+        "path": "config/actor-bounds.json",
+        "url": "/assets/config/actor-bounds.json",
+        "usage": "Visual and collision bounds metadata for the sample actor"
+      },
+      {
+        "id": "hero-v2-manifest",
+        "kind": "json",
+        "path": "hero-v2/manifest.json",
+        "url": "/assets/hero-v2/manifest.json",
+        "usage": "Source manifest for the revised v2 high-fidelity starter hero spritesheets"
+      },
+      {
+        "id": "character-gym-config",
+        "kind": "json",
+        "path": "../configs/character-gym.json",
+        "url": "/configs/character-gym.json",
+        "usage": "Persistent editable character animation and bounds metadata exported from the Character Gym"
+      },
+      {
+        "id": "background-gym-config",
+        "kind": "json",
+        "path": "../configs/background-gym.json",
+        "url": "/configs/background-gym.json",
+        "usage": "Persistent editable parallax layer metadata exported from the Background Gym"
+      },
+      {
+        "id": "tile-atlas-manifest",
+        "kind": "json",
+        "path": "tiles/quest/atlas-transparent.manifest.json",
+        "url": "/assets/tiles/quest/atlas-transparent.manifest.json",
+        "usage": "Frame bounds manifest for the transparent quest tile atlas"
+      },
+      {
+        "id": "quest-ui-atlas-manifest",
+        "kind": "json",
+        "path": "ui/quest/ui-atlas-transparent.manifest.json",
+        "url": "/assets/ui/quest/ui-atlas-transparent.manifest.json",
+        "usage": "Frame bounds manifest for the transparent quest HUD UI atlas"
+      },
+      {
+        "id": "tile-gym-config",
+        "kind": "json",
+        "path": "../configs/tile-gym.json",
+        "url": "/configs/tile-gym.json",
+        "usage": "Persistent editable tile collision and hit bounds metadata exported from the Tile Gym"
+      },
+      {
+        "id": "starter-object-metadata",
+        "kind": "json",
+        "path": "config/object-metadata.json",
+        "url": "/assets/config/object-metadata.json",
+        "usage": "Object category and bounds metadata for starter objects"
+      },
+      {
+        "id": "enemy-v3-purple-orc-manifest",
+        "kind": "json",
+        "path": "enemies/purple-orc/manifest.json",
+        "url": "/assets/enemies/purple-orc/manifest.json",
+        "usage": "Source manifest for the v3 purple orc enemy spritesheets"
+      }
+    ],
+    "levels": [
+      {
+        "id": "starter-level-index",
+        "kind": "json",
+        "path": "levels/index.json",
+        "url": "/assets/levels/index.json",
+        "usage": "Playable starter level catalog"
+      },
+      {
+        "id": "starter-level-1",
+        "kind": "json",
+        "path": "levels/level-1.json",
+        "url": "/assets/levels/level-1.json",
+        "usage": "Simple editable playground level"
+      },
+      {
+        "id": "starter-level-2",
+        "kind": "json",
+        "path": "levels/level-2.json",
+        "url": "/assets/levels/level-2.json",
+        "usage": "Medium editable scrolling playground level"
+      },
+      {
+        "id": "starter-level-3",
+        "kind": "json",
+        "path": "levels/level-3.json",
+        "url": "/assets/levels/level-3.json",
+        "usage": "Hard editable scrolling playground level with an orc encounter"
+      }
+    ]
+  },
+  "generatedAssets": [
+    {
+      "id": "ui-button",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 320,
+      "height": 60,
+      "usage": "menu button background"
+    },
+    {
+      "id": "ui-button-active",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 320,
+      "height": 60,
+      "usage": "selected menu button background"
+    },
+    {
+      "id": "ui-panel",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 520,
+      "height": 420,
+      "usage": "settings panel background"
+    },
+    {
+      "id": "sample-actor",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 42,
+      "height": 54,
+      "usage": "neutral starter actor"
+    },
+    {
+      "id": "sample-platform",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 180,
+      "height": 38,
+      "usage": "neutral starter platform tile"
+    },
+    {
+      "id": "sample-pickup",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 28,
+      "height": 28,
+      "usage": "neutral starter collectible"
+    },
+    {
+      "id": "sample-exit",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 70,
+      "height": 112,
+      "usage": "neutral starter level exit"
+    },
+    {
+      "id": "sample-hazard",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 56,
+      "height": 30,
+      "usage": "neutral starter hazard"
+    },
+    {
+      "id": "sample-bg-sky",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 1280,
+      "height": 720,
+      "usage": "generated sky/background layer"
+    },
+    {
+      "id": "sample-bg-far",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 1280,
+      "height": 720,
+      "usage": "generated far parallax layer"
+    },
+    {
+      "id": "sample-bg-mid",
+      "kind": "generated-texture",
+      "source": "src/game/generatedAssets.ts",
+      "width": 1280,
+      "height": 720,
+      "usage": "generated mid parallax layer"
+    },
+    {
+      "id": "starter-jump",
+      "kind": "generated-audio",
+      "source": "src/game/core/audio.ts",
+      "durationSeconds": 0.08,
+      "usage": "generated jump cue"
+    },
+    {
+      "id": "starter-pickup",
+      "kind": "generated-audio",
+      "source": "src/game/core/audio.ts",
+      "durationSeconds": 0.1,
+      "usage": "generated pickup cue"
+    },
+    {
+      "id": "starter-complete",
+      "kind": "generated-audio",
+      "source": "src/game/core/audio.ts",
+      "durationSeconds": 0.18,
+      "usage": "generated level complete cue"
+    },
+    {
+      "id": "starter-deny",
+      "kind": "generated-audio",
+      "source": "src/game/core/audio.ts",
+      "durationSeconds": 0.12,
+      "usage": "generated blocked/deny cue"
+    }
+  ],
+  "metadataExamples": {
+    "image": {
+      "id": "example-background",
+      "kind": "image",
+      "path": "backgrounds/example-background.png",
+      "url": "/assets/backgrounds/example-background.png",
+      "width": 1280,
+      "height": 720,
+      "phaser": {
+        "load": "image",
+        "key": "example-background"
+      }
+    },
+    "spritesheet": {
+      "id": "example-character-idle",
+      "kind": "spritesheet",
+      "path": "characters/example/idle.png",
+      "url": "/assets/characters/example/idle.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frames": 8,
+      "margin": 0,
+      "spacing": 0,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "animation": {
+        "key": "example-character-idle",
+        "frameRate": 8,
+        "repeat": -1
+      },
+      "phaser": {
+        "load": "spritesheet",
+        "key": "example-character-idle"
+      }
+    },
+    "audio": {
+      "id": "example-confirm",
+      "kind": "audio",
+      "path": "sfx/example-confirm.mp3",
+      "url": "/assets/sfx/example-confirm.mp3",
+      "durationSeconds": 0.4,
+      "volume": 0.5,
+      "loop": false,
+      "phaser": {
+        "load": "audio",
+        "key": "example-confirm"
+      }
+    }
+  }
+}

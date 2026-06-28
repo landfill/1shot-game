@@ -29,7 +29,7 @@ app.innerHTML = `
   <section class="masthead">
     <div>
       <p class="eyebrow">Toy Arcade</p>
-      <h1>Four browser toys in one cabinet.</h1>
+      <h1>Six browser toys in one cabinet.</h1>
     </div>
     <p class="mast-copy">Small interactive experiments, from voxel arenas to cloth-driven image layers, framed as quick cabinets for the same shelf.</p>
   </section>
